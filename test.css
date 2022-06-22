@@ -37,6 +37,9 @@
   #demo .carousel-item img {
     height: 50vh;
   }
+  .navbar {
+    display: none;
+  }
 }
 
 #section-items {
@@ -45,11 +48,18 @@
 #section-heading {
   font-family: "Bebas Neue", cursive;
   color: black;
+  text-align: center;
+  font-size: 35px;
 }
 
+#section-heading-main {
+  font-family: "Bebas Neue", cursive;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
 .heading-hr {
   margin-left: 10px;
-  width: 100px;
   border: 5px solid #ffbf50;
 }
 .card-body {
@@ -59,4 +69,46 @@
 
 #match-card {
   background-color: #ffbf50bd;
+}
+
+.parallax-cricket {
+  /* The image used */
+  background-image: url("./cricparallax.jpg");
+
+  /* Set a specific height */
+  min-height: 100px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-football {
+  /* The image used */
+  background-image: url("./footparallax.jpg");
+
+  /* Set a specific height */
+  min-height: 100px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-valorant {
+  /* The image used */
+  background-image: url("./valorantparallax.png");
+
+  /* Set a specific height */
+  min-height: 100px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
