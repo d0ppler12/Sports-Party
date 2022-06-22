@@ -11,7 +11,7 @@
 
 .car-caption {
   color: white;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Pacifico", cursive;
   font-size: 100px;
   font-style: italic;
 }
@@ -21,8 +21,12 @@
 }
 
 .nav-item .nav-link {
-  font-size: 25px;
+  font-size: 35px;
+  font-family: "Bebas Neue", cursive;
   color: black;
+}
+.nav-item .nav-link:hover {
+  color: white;
 }
 .nav-item:hover {
   border-radius: 15px;
@@ -33,4 +37,9 @@
   #demo .carousel-item img {
     height: 50vh;
   }
+}
+
+#section-items {
+  background-color: grey;
+  height: 150px;
 }
