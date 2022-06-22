@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+#demo .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  height: 90vh;
+}
+
+.car-caption {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 100px;
+  font-style: italic;
+}
+
+.navbar {
+  background-color: rgb(255, 255, 255);
+}
+
+.nav-item .nav-link {
+  font-size: 25px;
+  color: black;
+}
+.nav-item:hover {
+  border-radius: 15px;
+  background-color: #ffbf50;
+}
+
+@media only screen and (max-width: 720px) {
+  #demo .carousel-item img {
+    height: 50vh;
+  }
+}
