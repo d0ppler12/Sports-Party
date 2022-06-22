@@ -40,6 +40,23 @@
 }
 
 #section-items {
-  background-color: grey;
-  height: 150px;
+  height: 250px;
+}
+#section-heading {
+  font-family: "Bebas Neue", cursive;
+  color: black;
+}
+
+.heading-hr {
+  margin-left: 10px;
+  width: 100px;
+  border: 5px solid #ffbf50;
+}
+.card-body {
+  font-size: 50px;
+  font-family: "Bebas Neue", cursive;
+}
+
+#match-card {
+  background-color: #ffbf50bd;
 }
