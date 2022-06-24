@@ -1,10 +1,6 @@
 async function test() {
-  fetch("http://localhost:5000/harsh").then((response) =>
-    console.log(response)
+  const x = await fetch("http://localhost:5000/harsh").then((response) =>
+    response.json()
   );
-}
-
-async function test2() {
-  const x = await test();
   console.log(x);
 }
