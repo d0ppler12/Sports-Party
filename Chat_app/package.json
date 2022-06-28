@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "dev": "nodemon server",
-    "build": "react-scripts build"
+    "dev": "nodemon server"
   },
   "author": "Harsh Mishra",
   "license": "MIT",
@@ -18,8 +17,6 @@
     "axios": "^0.27.2",
     "express": "^4.18.1",
     "moment": "^2.29.3",
-    "react-chat-engine": "^1.11.23",
-    "react-scripts": "^4.0.3",
     "socket.io": "^4.5.1"
   }
 }

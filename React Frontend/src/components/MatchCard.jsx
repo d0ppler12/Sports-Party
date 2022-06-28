@@ -15,7 +15,7 @@ const MatchCard = ({ data, position }) => {
             <Card.Text>
               <CricketMatchdata data={data} position={position} />
             </Card.Text>
-            <Button variant="secondary" href="../gg.html">
+            <Button variant="secondary" href="http://localhost:5000/">
               JOIN ROOM
             </Button>
           </Card.Body>
