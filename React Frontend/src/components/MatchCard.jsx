@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 const MatchCard = ({ data, position }) => {
   if (data.matches[position])
     return (
-      <div class="col-sm-6 col-md-3 justify-content-center" id="section-items">
+      <div className="col-sm-6 col-md-3 justify-content-center" id="section-items">
         <Card
           id="match-card"
           className="text-black"
