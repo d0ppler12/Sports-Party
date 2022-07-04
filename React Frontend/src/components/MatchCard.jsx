@@ -5,7 +5,10 @@ import Button from "react-bootstrap/Button";
 const MatchCard = ({ data, position }) => {
   if (data.matches[position])
     return (
-      <div className="col-sm-6 col-md-3 justify-content-center" id="section-items">
+      <div
+        className="col-sm-6 col-md-3 justify-content-center"
+        id="section-items"
+      >
         <Card
           id="match-card"
           className="text-black"
@@ -15,7 +18,7 @@ const MatchCard = ({ data, position }) => {
             <Card.Text>
               <CricketMatchdata data={data} position={position} />
             </Card.Text>
-            <Button variant="secondary" href="http://localhost:5000/">
+            <Button variant="secondary" href="http://localhost:3000/">
               JOIN ROOM
             </Button>
           </Card.Body>
