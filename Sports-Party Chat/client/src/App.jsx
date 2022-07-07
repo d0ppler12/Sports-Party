@@ -1,6 +1,6 @@
 import "./App.css";
 import io from "socket.io-client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Chat from "./Chat";
 
 const socket = io.connect("http://localhost:3001");
@@ -16,7 +16,11 @@ function App() {
       setShowChat(true);
     }
   };
-
+  useEffect(() => {
+    var x = window.location.href;
+    var u = new URL(x);
+    setRoom(u.searchParams.get("id"));
+  }, []);
   return (
     <div className="App">
       {!showChat ? (
@@ -29,13 +33,7 @@ function App() {
               setUsername(event.target.value);
             }}
           />
-          <input
-            type="text"
-            placeholder="Room ID..."
-            onChange={(event) => {
-              setRoom(event.target.value);
-            }}
-          />
+          <input type="text" placeholder={room} disabled />
           <button onClick={joinRoom}>Join The Room</button>
         </div>
       ) : (
