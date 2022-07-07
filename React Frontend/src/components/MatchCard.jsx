@@ -9,6 +9,7 @@ const MatchCard = ({ data, position }) => {
       "id",
       `${data.matches[position].TeamA} vs ${data.matches[position].TeamB}`
     );
+    url.searchParams.set("pos", `${position}`);
     return (
       <div
         className="col-sm-6 col-md-3 justify-content-center"

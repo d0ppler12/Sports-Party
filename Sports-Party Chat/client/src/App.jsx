@@ -9,7 +9,15 @@ function App() {
   const [username, setUsername] = useState("");
   const [room, setRoom] = useState("");
   const [showChat, setShowChat] = useState(false);
-
+  const [dataisThere, SetdataisThere] = useState(null);
+  const [position, Setposition] = useState(null);
+  const getdetails = async () => {
+    const x = await fetch("https://cricket-api-sportsparty.herokuapp.com/");
+    const data = await x.json();
+    SetdataisThere(data);
+  };
+  getdetails();
+  setInterval(getdetails, 120000);
   const joinRoom = () => {
     if (username !== "" && room !== "") {
       socket.emit("join_room", room);
@@ -20,6 +28,7 @@ function App() {
     var x = window.location.href;
     var u = new URL(x);
     setRoom(u.searchParams.get("id"));
+    Setposition(u.searchParams.get("pos"));
   }, []);
   return (
     <div className="App">
@@ -37,7 +46,13 @@ function App() {
           <button onClick={joinRoom}>Join The Room</button>
         </div>
       ) : (
-        <Chat socket={socket} username={username} room={room} />
+        <Chat
+          socket={socket}
+          username={username}
+          room={room}
+          data={dataisThere}
+          position={position}
+        />
       )}
     </div>
   );

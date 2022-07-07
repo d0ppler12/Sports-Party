@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
+import Score from "./Score";
 
-function Chat({ socket, username, room }) {
+function Chat({ socket, username, room, data, position }) {
   const [currentMessage, setCurrentMessage] = useState("");
   const [messageList, setMessageList] = useState([]);
 
@@ -31,6 +32,7 @@ function Chat({ socket, username, room }) {
 
   return (
     <div className="chat-window">
+      <Score data={data} position={position} />
       <div className="chat-header">
         <p>Live Chat</p>
       </div>

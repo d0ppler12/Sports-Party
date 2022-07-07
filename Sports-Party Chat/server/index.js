@@ -31,6 +31,12 @@ io.on("connection", (socket) => {
   });
 });
 
+const getdetails = async () => {
+  const x = await fetch("https://cricket-api-sportsparty.herokuapp.com/");
+  const data = await x.json();
+  return data;
+};
+
 server.listen(3001, () => {
   console.log("SERVER RUNNING");
 });
